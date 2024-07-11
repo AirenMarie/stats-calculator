@@ -3,6 +3,15 @@ const getMean = (array) =>
 
 const getMedian = (array) => {
   const sorted = array.sort((a, b) => a - b);
+  if (sorted.length % 2 === 0) {
+    const firstMiddleNumber = sorted[sorted.length / 2];
+    const secondMiddleNumber = sorted[sorted.length / 2 - 1];
+    return getMean([firstMiddleNumber, secondMiddleNumber]);
+  }
+  if (sorted.length % 2 === 1) {
+    const middleNumber = sorted[Math.floor(sorted.length / 2)];
+    return middleNumber;
+  }
 };
 
 const calculate = () => {
