@@ -16,6 +16,7 @@ const getMedian = (array) => {
 
 const getMode = (array) => {
   const counts = {};
+  array.forEach((el) => {});
   return array;
 };
 
