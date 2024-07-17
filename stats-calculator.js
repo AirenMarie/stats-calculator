@@ -41,7 +41,10 @@ const calculate = () => {
   const numbers = array.map((el) => Number(el)).filter((el) => !isNaN(el));
 
   const mean = getMean(numbers);
+  const median = getMedian(numbers);
+  const mode = getMode(numbers);
 
   document.querySelector("#mean").textContent = mean;
   document.querySelector("#median").textContent = median;
+  document.querySelector("#mode").textContent = mode;
 };
