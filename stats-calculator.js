@@ -2,7 +2,7 @@ const getMean = (array) =>
   array.reduce((acc, el) => acc + el, 0) / array.length;
 
 const getMedian = (array) => {
-  const sorted = array.sort((a, b) => a - b);
+  const sorted = array.slice().sort((a, b) => a - b);
   if (sorted.length % 2 === 0) {
     const firstMiddleNumber = sorted[sorted.length / 2];
     const secondMiddleNumber = sorted[sorted.length / 2 - 1];
